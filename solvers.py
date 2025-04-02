@@ -30,13 +30,15 @@ def BFS(grid):
                 visited.append(neighbor)
                 path[neighbor] = current
     current = end
+    length = 0
     while current != start:
         grid.grid[current[0]][current[1]] = 2
         current = path[current]
+        length += 1
 
     end_time = time.time()
 
-    return {"time": end_time - start_time, "length": len(path)}
+    return {"time": end_time - start_time, "length": length}
 
 def dfs_solution(grid_cur: grid.grid):
     start_time = time.time()
