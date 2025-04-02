@@ -39,7 +39,9 @@ def dfs_solution(grid_cur: Grid):
     return (None, time.time() - start_time)
 
 
-maze = Grid(11, 11)
-maze.carve_passages_from(1, 1)
-dfs_solution(maze)
-print(maze.__str__())
+grid_cur = Grid.grid(45, 131)
+grid_cur.carve_passages_from(1,1)
+solution = dfs_solution(grid_cur)
+print(f"Path length: {solution[0]}")
+print(f"Time spent: {solution[1]}s")
+print(grid_cur.__str__())
