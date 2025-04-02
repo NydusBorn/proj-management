@@ -47,7 +47,7 @@ def dfs_solution(grid_cur: grid.grid):
             visited.add(next_point)
             parent[next_point] = current_point  # Сохраняем информацию о родителе
     
-    return (None, time.time() - start_time)
+    return (len(stack), time.time() - start_time)
 
 
 
