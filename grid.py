@@ -34,5 +34,5 @@ class grid:
         # Here " " represents a free cell and "█" represents a wall.
         s = ""
         for row in self.grid:
-            s += "".join(" " if cell == 0 else "█" for cell in row) + "\n"
+            s += "".join(" " if cell == 0 else "." if cell == 2 else "█" for cell in row) + "\n"
         return s
