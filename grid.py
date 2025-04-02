@@ -12,6 +12,12 @@ class grid:
         self.rows = rows
         self.cols = cols
         self.grid = [[1 for _ in range(cols)] for _ in range(rows)]
+    def clear_path(self):
+        # Convert all cells with a value of 2 to 0
+        for r in range(self.rows):
+            for c in range(self.cols):
+                if self.grid[r][c] == 2:
+                    self.grid[r][c] = 0
 
     def carve_passages_from(self, r, c):
         # Directions: move two cells (vertical & horizontal) at a time.
