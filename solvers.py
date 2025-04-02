@@ -1,10 +1,7 @@
-
-
 import time
-import Grid
+import grid
 
-
-def dfs_solution(grid_cur: Grid):
+def dfs_solution(grid_cur: grid.grid):
     start_time = time.time()
     start_point = (1, 1)
     end_point = (grid_cur.rows - 2, grid_cur.cols - 2)
@@ -39,8 +36,8 @@ def dfs_solution(grid_cur: Grid):
     return (None, time.time() - start_time)
 
 
-grid_cur = Grid.grid(45, 131)
-grid_cur.carve_passages_from(1,1)
+grid_cur = grid.grid(45, 135)
+grid_cur.carve_passages_from(1, 1)
 solution = dfs_solution(grid_cur)
 print(f"Path length: {solution[0]}")
 print(f"Time spent: {solution[1]}s")
