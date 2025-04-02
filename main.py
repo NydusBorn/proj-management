@@ -7,3 +7,5 @@ if __name__ == "__main__":
     print(f"Path length: {solution[0]}")
     print(f"Time spent: {solution[1]}s")
     print(grid_cur.__str__())
+    grid_cur.clear_path()
+    print(grid_cur.__str__())
